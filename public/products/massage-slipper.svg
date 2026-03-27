@@ -1,0 +1,17 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2344"/>
+      <stop offset="1" stop-color="#5D7CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="50" fill="url(#bg2)"/>
+  <circle cx="980" cy="200" r="150" fill="#A3B9FF" fill-opacity="0.2"/>
+  <path d="M370 580C370 500 430 435 510 435H680C760 435 825 500 825 580V605C825 685 760 745 680 745H510C430 745 370 685 370 605V580Z" fill="#E8EEFF"/>
+  <path d="M440 510C440 470 470 440 510 440H690C730 440 760 470 760 510V530H440V510Z" fill="#BFD0FF"/>
+  <circle cx="520" cy="600" r="18" fill="#99B5FF"/>
+  <circle cx="580" cy="600" r="18" fill="#99B5FF"/>
+  <circle cx="640" cy="600" r="18" fill="#99B5FF"/>
+  <circle cx="700" cy="600" r="18" fill="#99B5FF"/>
+  <text x="100" y="790" fill="#E8F1FF" font-family="Inter, sans-serif" font-size="52" font-weight="600">Massage Slipper</text>
+</svg>

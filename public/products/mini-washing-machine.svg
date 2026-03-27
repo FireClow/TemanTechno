@@ -1,0 +1,18 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1F4A"/>
+      <stop offset="1" stop-color="#3F8DFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="50" fill="url(#bg3)"/>
+  <rect x="420" y="180" width="360" height="540" rx="38" fill="#EDF3FF"/>
+  <rect x="450" y="220" width="300" height="70" rx="20" fill="#C9DAFF"/>
+  <circle cx="510" cy="255" r="18" fill="#5F87FF"/>
+  <circle cx="560" cy="255" r="18" fill="#5F87FF"/>
+  <circle cx="610" cy="255" r="18" fill="#5F87FF"/>
+  <circle cx="600" cy="470" r="145" fill="#B4CCFF"/>
+  <circle cx="600" cy="470" r="120" fill="#8BB2FF"/>
+  <circle cx="600" cy="470" r="85" fill="#6A98FF"/>
+  <text x="100" y="790" fill="#E8F1FF" font-family="Inter, sans-serif" font-size="52" font-weight="600">Mini Washing Machine</text>
+</svg>

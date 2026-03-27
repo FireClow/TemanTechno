@@ -1,0 +1,15 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10245A"/>
+      <stop offset="1" stop-color="#4A95FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="50" fill="url(#bg4)"/>
+  <ellipse cx="600" cy="640" rx="220" ry="44" fill="#0A1638" fill-opacity="0.25"/>
+  <rect x="450" y="230" width="300" height="390" rx="38" fill="#E8F1FF"/>
+  <rect x="480" y="270" width="240" height="120" rx="24" fill="#BAD0FF"/>
+  <path d="M510 470C510 430 542 398 582 398H618C658 398 690 430 690 470V525C690 565 658 597 618 597H582C542 597 510 565 510 525V470Z" fill="#9BBBFF"/>
+  <path d="M595 450C595 450 640 488 595 540" stroke="#F2F6FF" stroke-width="18" stroke-linecap="round"/>
+  <text x="100" y="790" fill="#E8F1FF" font-family="Inter, sans-serif" font-size="52" font-weight="600">Portable Dryer</text>
+</svg>
