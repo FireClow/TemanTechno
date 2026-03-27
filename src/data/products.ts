@@ -13,7 +13,7 @@ export const products: Product[] = [
       "Desain minimalis anti bau",
       "Hemat daya untuk penggunaan harian",
     ],
-    image: "/products/smart-trash-bin.svg",
+    image: "/products/smart-trash-bin.png",
     category: "home",
   },
   {
@@ -28,7 +28,7 @@ export const products: Product[] = [
       "Ringan dan fleksibel",
       "Cocok untuk indoor dan outdoor ringan",
     ],
-    image: "/products/massage-slipper.svg",
+    image: "/products/massage-slipper.png",
     category: "wellness",
   },
   {
@@ -43,7 +43,7 @@ export const products: Product[] = [
       "Konsumsi air dan listrik efisien",
       "Mudah dipindah dan disimpan",
     ],
-    image: "/products/mini-washing-machine.svg",
+    image: "/products/mini-washing-machine.png",
     category: "laundry",
   },
   {
@@ -58,7 +58,7 @@ export const products: Product[] = [
       "Lipat-portabel untuk mobilitas tinggi",
       "Sistem pengeringan rendah kebisingan",
     ],
-    image: "/products/portable-dryer.svg",
+    image: "/products/portable-dryer.png",
     category: "laundry",
   },
 ];
