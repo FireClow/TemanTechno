@@ -63,7 +63,17 @@ export const products: Product[] = [
   },
 ];
 
-export const featuredProducts = products.slice(0, 3);
+export function getAllProducts() {
+  return products;
+}
+
+export function getHomepageProducts(limit?: number) {
+  if (typeof limit === "number") {
+    return products.slice(0, limit);
+  }
+
+  return products;
+}
 
 export function getProductBySlug(slug: string) {
   return products.find((product) => product.slug === slug);

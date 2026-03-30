@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { SiteNavbar } from "@/components/organisms/site-navbar";
 import { SiteFooter } from "@/components/organisms/site-footer";
 import { ScrollProgress } from "@/components/atoms/scroll-progress";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://temantechno.vercel.app"),
@@ -42,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${inter.variable}`} suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning>
       <body className="min-h-screen text-foreground">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <ScrollProgress />
