@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MagneticButton } from "@/components/atoms/magnetic-button";
+import { TrackedLink } from "@/components/atoms/tracked-link";
 import { buildWhatsAppUrl } from "@/lib/constants";
 
 export function HeroSection() {
@@ -32,11 +32,17 @@ export function HeroSection() {
         <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
           <MagneticButton>
             <Button asChild size="lg">
-              <Link href="/products">Explore Products</Link>
+              <TrackedLink href="/products">Explore Products</TrackedLink>
             </Button>
           </MagneticButton>
           <Button asChild variant="secondary" size="lg">
-            <Link href={buildWhatsAppUrl("Halo Teman Techno, saya tertarik dengan produk smart living.")}>Talk via WhatsApp</Link>
+            <TrackedLink
+              href={buildWhatsAppUrl("Halo Teman Techno, saya tertarik dengan produk smart living.")}
+              eventName="Lead"
+              eventParams={{ content_name: "Hero WhatsApp CTA", source_page: "home" }}
+            >
+              Talk via WhatsApp
+            </TrackedLink>
           </Button>
         </div>
       </motion.div>

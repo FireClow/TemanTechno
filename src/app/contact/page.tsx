@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { TrackedLink } from "@/components/atoms/tracked-link";
 import { buildWhatsAppUrl } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -20,7 +20,13 @@ export default function ContactPage() {
             Konsultasi langsung dengan tim kami untuk rekomendasi produk sesuai kebutuhan kamu.
           </p>
           <Button asChild size="lg" className="mt-8">
-            <Link href={buildWhatsAppUrl("Halo Teman Techno, saya ingin konsultasi produk.")}>Chat via WhatsApp</Link>
+            <TrackedLink
+              href={buildWhatsAppUrl("Halo Teman Techno, saya ingin konsultasi produk.")}
+              eventName="Contact"
+              eventParams={{ method: "whatsapp", content_name: "Contact Hero CTA", source_page: "contact" }}
+            >
+              Chat via WhatsApp
+            </TrackedLink>
           </Button>
         </article>
         <article className="glass rounded-3xl p-6 md:p-8">
@@ -30,7 +36,13 @@ export default function ContactPage() {
             <Input placeholder="Email" type="email" />
             <Input placeholder="Produk yang diminati" />
             <Button asChild className="w-full">
-              <Link href={buildWhatsAppUrl("Halo Teman Techno, saya ingin info detail produk.")}>Send via WhatsApp</Link>
+              <TrackedLink
+                href={buildWhatsAppUrl("Halo Teman Techno, saya ingin info detail produk.")}
+                eventName="Contact"
+                eventParams={{ method: "whatsapp", content_name: "Quick Inquiry CTA", source_page: "contact" }}
+              >
+                Send via WhatsApp
+              </TrackedLink>
             </Button>
           </div>
         </article>

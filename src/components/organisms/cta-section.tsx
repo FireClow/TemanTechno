@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { MessageCircleMore } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { TrackedLink } from "@/components/atoms/tracked-link";
 import { buildWhatsAppUrl } from "@/lib/constants";
 
 export function CtaSection() {
@@ -17,10 +17,14 @@ export function CtaSection() {
             Tim Teman Techno siap membantu kamu memilih produk paling cocok sesuai kebutuhan dan budget.
           </p>
           <Button asChild size="lg" variant="secondary" className="mt-8 bg-white text-blue-700 hover:bg-blue-50">
-            <Link href={buildWhatsAppUrl("Halo Tim Teman Techno, saya ingin rekomendasi produk terbaik.")}>
+            <TrackedLink
+              href={buildWhatsAppUrl("Halo Tim Teman Techno, saya ingin rekomendasi produk terbaik.")}
+              eventName="Lead"
+              eventParams={{ content_name: "Bottom CTA WhatsApp", source_page: "home" }}
+            >
               <MessageCircleMore className="h-4 w-4" />
               Konsultasi via WhatsApp
-            </Link>
+            </TrackedLink>
           </Button>
         </div>
       </div>

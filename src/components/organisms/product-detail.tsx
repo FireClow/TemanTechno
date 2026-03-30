@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import { Product } from "@/types/product";
 import { formatIDR } from "@/data/products";
 import { buildWhatsAppUrl } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { TrackedLink } from "@/components/atoms/tracked-link";
+import { MetaPixelViewContentTracker } from "@/components/providers/meta-pixel-view-content-tracker";
 
 interface ProductDetailProps {
   product: Product;
@@ -16,6 +17,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
   return (
     <section className="site-shell section-space pt-24 md:pt-28">
+      <MetaPixelViewContentTracker product={product} />
       <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
         <div className="glass overflow-hidden rounded-3xl p-4 md:p-6">
           <div className="relative overflow-hidden rounded-2xl border border-border bg-white/60 dark:bg-slate-900/45">
@@ -46,10 +48,20 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg">
-              <Link href={buildWhatsAppUrl(message)}>Order via WhatsApp</Link>
+              <TrackedLink
+                href={buildWhatsAppUrl(message)}
+                eventName="Lead"
+                eventParams={{
+                  content_name: product.title,
+                  content_ids: [product.slug],
+                  source_page: "product_detail",
+                }}
+              >
+                Order via WhatsApp
+              </TrackedLink>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="/products">Back to Products</Link>
+              <TrackedLink href="/products">Back to Products</TrackedLink>
             </Button>
           </div>
         </div>

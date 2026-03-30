@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { MetaPixelPageViewTracker } from "@/components/providers/meta-pixel-pageview-tracker";
 import { SiteNavbar } from "@/components/organisms/site-navbar";
 import { SiteFooter } from "@/components/organisms/site-footer";
 import { ScrollProgress } from "@/components/atoms/scroll-progress";
@@ -38,7 +40,30 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <body className="min-h-screen text-foreground">
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1417044546248444');
+fbq('track', 'PageView');`}
+        </Script>
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            alt=""
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1417044546248444&ev=PageView&noscript=1"
+          />
+        </noscript>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <MetaPixelPageViewTracker />
           <ScrollProgress />
           <SiteNavbar />
           <main className="pb-16">{children}</main>

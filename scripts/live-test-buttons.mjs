@@ -20,7 +20,7 @@ const errors = [];
 
 function extractHrefs(html) {
   const hrefs = [];
-  const re = /<a\\b[^>]*href=\"([^\"]+)\"/gi;
+  const re = /<a\b[^>]*href="([^"]+)"/gi;
   let match;
   while ((match = re.exec(html)) !== null) {
     hrefs.push(match[1]);
@@ -29,7 +29,7 @@ function extractHrefs(html) {
 }
 
 function countButtons(html) {
-  const match = html.match(/<button\\b/gi);
+  const match = html.match(/<button\b/gi);
   return match ? match.length : 0;
 }
 
